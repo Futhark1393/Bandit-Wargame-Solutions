@@ -14,6 +14,7 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 # Password: bandit0
 ls
 cat readme
+```
 
 Password for Level 1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 
@@ -28,6 +29,7 @@ The file is named `-`, which is a special character for STDIN. To read it as a f
 ls
 # Output: -
 cat ./-
+```
 
 Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
