@@ -9,10 +9,10 @@ This repository contains my write-ups and solutions for the **[OverTheWire Bandi
 
 | Level Range | Status | Write-up Link |
 | :--- | :---: | :--- |
-| **Level 0 -> 10** | 🟡 | [View Solutions](Bandit/Level0-10.md) |
-| **Level 11 -> 20** | ⚪ | [View Solutions](Bandit/Level10-20.md) |
-| **Level 21 -> 30** | ⚪ | [View Solutions](Bandit/Level20-30.md) |
-| **Level 31 -> 34** | ⚪ | [View Solutions](Bandit/Level30-34.md) |
+| **Level 0 -> 10** | ✅ | [View Solutions](Bandit/Level0-10.md) |
+| **Level 11 -> 20** | 🟡 | [View Solutions](Bandit/Level11-20.md) |
+| **Level 21 -> 30** | ⚪ | [View Solutions](Bandit/Level21-30.md) |
+| **Level 31 -> 34** | ⚪ | [View Solutions](Bandit/Level31-34.md) |
 
 ---
 *Created on Fedora Linux* 🐧
