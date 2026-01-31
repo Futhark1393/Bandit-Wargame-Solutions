@@ -18,6 +18,8 @@ cat readme
 
 Password for Level 1: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
 
+---
+
 ## Level 1 -> 2
 **Goal:** Read the file named `-` located in the home directory.
 **Commands Used:** `cat`
@@ -32,6 +34,8 @@ cat ./-
 ```
 
 Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+---
 
 ## Level 2 -> 3
 **Goal:** Read a file named `spaces in this filename` located in the home directory.
@@ -56,4 +60,6 @@ cat spaces\ in\ this\ filename
 ```
 
 Password for Level 3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+---
 
