@@ -33,3 +33,27 @@ cat ./-
 
 Password for Level 2: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 
+## Level 2 -> 3
+**Goal:** Read a file named `spaces in this filename` located in the home directory.
+**Commands Used:** `cat`
+
+### Solution
+The filename contains spaces, so the terminal interprets it as multiple arguments. To read it as a single file, we need to wrap the name in quotes or escape the spaces.
+
+```bash
+ls
+# Output: spaces in this filename
+```
+
+# Method 1: Using quotes
+```bash
+cat "spaces in this filename"
+```
+
+# Method 2: Using Tab completion (escapes spaces automatically)
+```bash
+cat spaces\ in\ this\ filename
+```
+
+Password for Level 3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
