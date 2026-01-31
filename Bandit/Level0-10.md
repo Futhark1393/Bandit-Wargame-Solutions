@@ -107,3 +107,33 @@ nano ./-file07
 Password for Level 5: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 
 ---
+
+## Level 5 -> 6
+**Goal:** Find a file in the `inhere` directory that matches three specific properties:
+1. Human-readable
+2. 1033 bytes in size
+3. Not executable
+
+**Comands Used:** `ls`, `cd`, `find`, `nano`
+
+### Solution
+The `inhere` directory contains many subdirectories. Checking them manually is inefficient. I used the `find` command with specific flags to filter for the file matching the criteria.
+
+* `-type f`: Look for files only.
+* `-size 1033c`: Filters for files exactly 1033 bytes in size.
+* `-not -executable`: Excludes executable files.
+* `|| grep ASCII`: Filters for files which is Human-readable.
+
+```bash
+ls
+cd inhere/
+man find
+find . -type f -size 1033c -not -executable || grep ASCII
+# Output: ./maybehere07/.file2
+
+nano ./maybehere07/.file2
+```
+
+Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+---
