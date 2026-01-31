@@ -186,3 +186,25 @@ Password for Level 8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
 
 ---
 
+---
+
+## Level 8 -> 9
+**Goal:** The password is the only line of text that occurs only once in `data.txt`.
+**Commands Used:** `sort`, `uniq`
+
+### Solution
+The file contains many repeating lines. The `uniq` command can filter out duplicates, but it only works if the duplicate lines are adjacent (next to each other). Therefore, we must first sort the file using `sort` and then pipe (`|`) the output to `uniq -u`.
+
+* `sort data.txt`: Sorts all lines alphabetically.
+* `uniq -u`: Filters and shows only unique lines.
+
+```bash
+sort data.txt | uniq -u
+# Output: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+```
+
+Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+---
+
+
