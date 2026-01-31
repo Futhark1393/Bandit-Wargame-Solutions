@@ -207,4 +207,18 @@ Password for Level 9: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 
 ---
 
+---
 
+## Level 9 -> 10
+**Goal:** The password is a human-readable string in `data.txt`, preceded by several `=` characters.
+**Commands Used:** `strings`, `grep`
+
+### Solution
+The file `data.txt` is a binary file containing mostly unreadable characters. Using `cat` directly would mess up the terminal. The `strings` command extracts all printable character sequences from a binary file. I piped the output to `grep` to look for the `=` markers.
+
+```bash
+strings data.txt | grep "=="
+# Output: ========== FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+```
+
+Password for Level 10: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
