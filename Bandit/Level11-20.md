@@ -109,5 +109,28 @@ Password for Level 15: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 
 ---
 
+---
+
+## Level 15 -> 16
+**Goal:** Submit the password of the current level to port 30001 on localhost using SSL encryption.
+**Commands Used:** `openssl`
+
+### Solution
+Port 30001 expects an SSL/TLS encrypted connection, so standard `netcat` won't work. I used `openssl s_client` to establish a secure connection.
+
+```bash
+# Connect using SSL
+openssl s_client -connect localhost:30001
+
+# (Once connected, paste the current password)
+# Input: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+# Output:
+# Correct!
+# kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+```
+
+Password for Level 16: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+
+---
 
 
