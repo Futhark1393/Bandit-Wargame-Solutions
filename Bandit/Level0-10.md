@@ -87,4 +87,23 @@ Password for Level 4: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 
 ---
 
+## Level 4 -> 5
+**Goal:**  Fİnd the only human-readable file in the `inhere` directory.
+**Commands Used:** `ls`, `cd`, `file`, `nano`
 
+### Solution
+
+The directory contains many files named with a leading dash (`-`). Using `nano` on binary files produces garbage output. The `file` command reveals the data type of each file. We are looking for ""ASCII text".
+
+```bash
+cd inhere
+file./x
+# Result: ./-file07: ASCII text
+
+# Since the filename starts with a dash, we use ./ prefix
+nano ./-file07
+```
+
+Password for Level 5: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+---
