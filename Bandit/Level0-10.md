@@ -137,3 +137,32 @@ nano ./maybehere07/.file2
 Password for Level 6: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ---
+
+---
+
+## Level 6 -> 7
+**Goal:** Find a file stored somewhere on the server that matches 3 properties:
+1. Owned by user `bandit7`
+2. Owned by group `bandit6`
+3. 33 bytes in size
+
+**Commands Used:** `find`, `grep`, `cat`
+
+### Solution
+Since we need to search the entire system, we start searching from root (`/`). Running `find` on the whole system causes many "Permission denied" errors. We redirect these errors to `/dev/null` to see a clean output.
+
+* `-user bandit7`: Filters by owner.
+* `-group bandit6`: Filters by group.
+* `-size 33c`: Filters by size.
+* `2>/dev/null`: Hides error messages (Standard Error).
+
+```bash
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+# Output: /var/lib/dpkg/info/bandit7.password: ASCII text
+
+cat /var/lib/dpkg/info/bandit7.password
+```
+
+Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+--
