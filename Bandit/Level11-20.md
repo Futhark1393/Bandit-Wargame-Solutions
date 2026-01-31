@@ -88,5 +88,26 @@ Password for Level 14: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 
 ---
 
+---
+
+## Level 14 -> 15
+**Goal:** Submit the password of the current level to port 30000 on localhost to retrieve the password for the next level.
+**Commands Used:** `nc`
+
+### Solution
+The `nc` (Netcat) command is used to read from and write to network connections using TCP or UDP. I connected to localhost on port 30000 and sent the current password.
+
+```bash
+nc localhost 30000
+# Input: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+# Output:
+# Correct!
+# 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+```
+
+Password for Level 15: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+---
+
 
 
