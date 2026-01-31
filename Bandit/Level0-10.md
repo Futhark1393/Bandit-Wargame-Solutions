@@ -63,3 +63,28 @@ Password for Level 3: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 
 ---
 
+## Level 3 -> 4
+**Goal:** The password for the next level is stored in a hidden file in the inhere directory.
+**Commands Used:** `ls -la` `cd` `nano`
+
+### Solution 
+The password file is located inside the `inhere` directory but is hidden. In Linux, files starting with a dot (`.`) are hidden. We use the `-a` or `-la` to see them.
+
+```bash
+ls
+# Output: inhere
+
+cd inhere
+ls
+# Output: (empty)
+
+ls -la
+# Output: ...Hiding-From-You
+
+nano ...Hiding-From-You
+```
+Password for Level 4: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+---
+
+
