@@ -165,4 +165,24 @@ cat /var/lib/dpkg/info/bandit7.password
 
 Password for Level 7: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
---
+---
+
+## Level 7 -> 8
+**Goal:** The password is stored in the file `data.txt` next to the word "millionth".
+**Commands Used:** `ls`, `grep`
+
+### Solution
+The file contains thousands of lines. Reading it manually is impossible. I used `grep` to search for the specific keyword "millionth" within the file.
+
+```bash
+ls
+# Output: data.txt
+
+grep "millionth" data.txt
+# Output: millionth     dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+
+Password for Level 8: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+---
+
