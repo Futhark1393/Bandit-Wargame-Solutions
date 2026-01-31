@@ -56,5 +56,37 @@ Password for Level 13: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 
 ---
 
+---
+
+## Level 13 -> 14
+**Goal:** The password for the next level is stored in `/etc/bandit_pass/bandit14` and can only be read by user `bandit14`. We are provided with an SSH private key (`sshkey.private`) to log in.
+
+**Commands Used:** `ssh`, `cat`, `chmod`, `cp`
+
+### Solution
+We found an SSH private key named `sshkey.private`.
+1. Since the private key requires strict permissions (read-only by owner), I copied it to a temporary directory in `/tmp` and set permissions to `600`.
+2. Connecting to `localhost` with a key can sometimes cause host verification errors. I used specific SSH flags to force the connection using the key and bypass the host check.
+
+```bash
+# 1. Prepare the key
+mkdir /tmp/kemal13
+cp sshkey.private /tmp/kemal13/mysshkey
+chmod 600 /tmp/kemal13/mysshkey
+
+# 2. Connect to bandit14
+# -i: Identity file
+# -o StrictHostKeyChecking=no: Ignore host key verification
+# -o IdentitiesOnly=yes: Force using only the provided key
+ssh -i /tmp/kemal13/mysshkey -o StrictHostKeyChecking=no -o IdentitiesOnly=yes bandit14@127.0.0.1 -p 2220
+
+# 3. Retrieve the password (once logged in)
+cat /etc/bandit_pass/bandit14
+# Output: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+```
+Password for Level 14: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+---
+
 
 
